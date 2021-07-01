@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+        <title>Kule</title>
+    </head>
+    <body>
+        <div id="content">
+            <h1>Problem #1 - Kule</h1>
+            <hr>
+            <p>Wśród niżej przedstawionych kul, jedna ma inną masę i tylko tym różni się od pozostałych.</p>
+            <p>Twoim zadaniem jest określić sposób i kolejność porównywania tych kul na wadze szalkowej, aby możliwe było jej wskazanie, przy jak najmniejszej liczbie ważeń.</p>
+
+            <button id="weigh-button" onclick="MainCanvas.weigh()">Waż</button>
+            <button id="stop-weighing-button" onclick="MainCanvas.stopWeighing()" disabled="true">Przestań ważyć</button>
+            <button onclick="MainCanvas.reset()">Resetuj</button><br>
+            <p id="weigh-count">ważenia: 0</p><br>
+            <script src="main-canvas.js"></script>
+            <canvas id="main-canvas" height="600px" width="800px"></canvas><br>
+            <p>Która kula ma inną masę? </p>
+            <select id="answer">
+                <option value="0">czerwona</option>
+                <option value="1">zielona</option>
+                <option value="2">niebieska</option>
+            </select>
+            <button onclick="MainCanvas.check()">Sprawdź odpowiedź</button><br>
+            <br><br><br>
+            <hr>
+            <p>By Maciej Kowalski 2021</p>
+        </div>
+    </body>
+</html>
